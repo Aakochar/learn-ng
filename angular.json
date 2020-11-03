@@ -121,8 +121,16 @@
               "devServerTarget": "learn-ng:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "learn-ng"
+    }
+  },
+  "defaultProject": "learn-ng",
+  "cli": {
+    "analytics": false
+  }
 }
