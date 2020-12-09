@@ -8,7 +8,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  searchUrl = 'http://openlibrary.org/search.json?q=the+lord+of+the+rings';
+  searchUrl = '//openlibrary.org/search.json?q=the+lord+of+the+rings';
 
   constructor(private http: HttpClient) {}
 
