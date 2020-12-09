@@ -1,18 +1,24 @@
 .main {
+    &__header {
+        margin: 0 5px;
+    }
+
+    &__footer {
+        margin: 0 5px;
+    }
+
     &__contents {
-        width: 100%;
         margin: 0;
         display: flex;
     }
 
     &__sidebar {
-        width: 20%;
         height: 95vh;
+        padding: 0 5px;
         background-color: lightblue;
     }
 
     &__router-view {
-        width: 80%;
         border: 1px solid gray;
     }
 }

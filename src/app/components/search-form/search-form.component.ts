@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ApiService } from '../../services/api.service';
+
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getSearchResults()
+      .subscribe(
+        (data: any) => {
+          console.log("success!");
+          console.log(data);
+        }, 
+        error => console.error(error),
+      );
   }
 
 }
